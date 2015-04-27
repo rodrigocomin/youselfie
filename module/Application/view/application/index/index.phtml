@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-8 col-md-5 col-sm-offset-2 col-md-offset-0">
+            <div role="form">
+                <?php echo $this->form()->openTag($form); ?>
+                <fieldset>
+                    <hr class="colorgraph">
+                    <div class="form-group form-group-cadastro">
+                        <?php echo $this->formRow($form->get('email')); ?>
+                    </div>
+                    <div class="form-group form-group-cadastro">
+                        <?php echo $this->formRow($form->get('senha')); ?>
+                    </div>
+                    <span class="button-checkbox">
+                        <?php echo $this->formRow($form->get('checkbox')); ?>
+                        <a href="esqueceu-sua-senha/recuperar-senha" class="btn btn-link pull-right">Esqueçeu sua Senha?</a>
+                    </span>
+                    <hr class="colorgraph">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <?php echo $this->formSubmit($form->get('entrar')); ?>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <a href="usuario/novo" class="btn btn-lg btn-primary btn-block">Registre-se</a>
+                        </div>
+                    </div>
+                </fieldset>
+                <?php echo $this->form()->closeTag(); ?>
+            </div>
+        </div>
+    </div>
+</div>

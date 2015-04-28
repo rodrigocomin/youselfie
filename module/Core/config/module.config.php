@@ -3,20 +3,16 @@
 return array(
     'router' => array(
         'routes' => array(
-            'home' => array(
+            'core' => array(
                 'type' => 'Literal',
                 'options' => array(
-                    'route' => '/',
+                    'route' => '/core',
                     'defaults' => array(
                         'controller' => 'Core\Controller\Index',
                         'action' => 'index',
                     ),
                 ),
             ),
-            // The following is a route to simplify getting started creating
-            // new controllers and actions without needing to create a new
-            // module. Simply drop new controllers in, and you can access them
-            // using the path /core/:controller/:action
             'core' => array(
                 'type' => 'Literal',
                 'options' => array(
@@ -45,18 +41,6 @@ return array(
             ),
         ),
     ),
-    'doctrine' => array(
-        'driver' => array(
-            'application_entities' => array(
-                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-                'cache' => 'array',
-                'paths' => array(__DIR__ . '/../src/Core/Model')
-            ),
-            'orm_default' => array(
-                'drivers' => array(
-                    'Core\Model' => 'application_entities'
-                )
-            ))),
     'service_manager' => array(
         'factories' => array(
             'Session' => function ($sm) {
@@ -70,22 +54,6 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Core\Controller\Index' => 'Core\Controller\IndexController',
-        ),
-    ),
-    'view_manager' => array(
-        'display_not_found_reason' => true,
-        'display_exceptions' => true,
-        'doctype' => 'HTML5',
-        'not_found_template' => 'error/404',
-        'exception_template' => 'error/index',
-        'template_map' => array(
-            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
-            'core/index/index' => __DIR__ . '/../view/core/index/index.phtml',
-            'error/404' => __DIR__ . '/../view/error/404.phtml',
-            'error/index' => __DIR__ . '/../view/error/index.phtml',
-        ),
-        'template_path_stack' => array(
-            __DIR__ . '/../view',
         ),
     ),
     // Placeholder for console routes

@@ -107,11 +107,11 @@ class Usuario extends Form
                 'label' => 'Sexo ',
                 'value_options' => array(
                     '1' => 'Masculino',
-                    '2' => 'Femenino',
+                    '2' => 'Feminino',
                 ),
             ),
             'attributes' => array(
-                'id' => '',
+                'id' => 'sexo',
                 'class' => 'form-control input-lg',
             ),
         ));

@@ -15,8 +15,8 @@ return array(
                 'options' => array(
                     'route' => '/home',
                     'defaults' => array(
-                        'controller' => 'Home\Controller\Index',
-                        'action' => 'index',
+                        'controller' => 'Home\Controller\Welcome',
+                        'action' => 'home',
                     ),
                 ),
             ),
@@ -30,8 +30,8 @@ return array(
                     'route' => '/home',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Home\Controller',
-                        'controller' => 'Index',
-                        'action' => 'index',
+                        'controller' => 'Welcome',
+                        'action' => 'home',
                     ),
                 ),
                 'may_terminate' => true,
@@ -76,7 +76,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Welcome' => 'Application\Controller\WelcomeController',
         ),
     ),
     'view_manager' => array(

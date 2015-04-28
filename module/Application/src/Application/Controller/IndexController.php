@@ -32,7 +32,7 @@ class IndexController extends ActionController
                 if ($usuario) {
                     $session = $this->getService('Session');
                     $session->offsetSet('Usuario', $usuario);
-                    return $this->redirect()->toUrl('/home/welcome/index');
+                    return $this->redirect()->toUrl('/home/welcome/home');
                 } else {
                     $this->flashMessenger()->addErrorMessage('Não conseguimos localizar sua conta, por favor tente novamente em alguns minutos.');
                     return $this->redirect()->toUrl('/');

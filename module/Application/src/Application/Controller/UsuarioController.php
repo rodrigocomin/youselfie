@@ -5,7 +5,6 @@ namespace Application\Controller;
 use Core\Controller\ActionController;
 use Zend\View\Model\ViewModel;
 use Application\Form\Usuario as Usuario;
-use Application\Model\Usuario as User;
 use Application\Validator\Usuario as validatorUsuario;
 
 /**

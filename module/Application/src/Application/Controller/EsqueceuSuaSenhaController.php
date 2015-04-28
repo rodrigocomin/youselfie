@@ -6,7 +6,6 @@ use Core\Controller\ActionController;
 use Zend\View\Model\ViewModel;
 use Application\Form\RecuperarSenha as RecuperarSenha;
 use Application\Validator\RecuperacaoSenha as validatorRecuperarSenha;
-//teste 
 
 /**
  * @author Christian R. Kolling <christian.si@unochapeco.edu.br>

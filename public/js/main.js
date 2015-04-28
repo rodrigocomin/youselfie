@@ -13,7 +13,4 @@ $(document).ready(function () {
     }).trigger('focusout');
 
     $("#nascimento").mask("99-99-9999");
-
-
-
 });
